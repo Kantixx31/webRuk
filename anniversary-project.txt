@@ -1,0 +1,11 @@
+anniversary-website/
+├── README.md
+├── index.html
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── audio/
+│   └── .gitkeep
+└── images/
+    └── .gitkeep

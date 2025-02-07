@@ -1,0 +1,210 @@
+@font-face {
+    font-family: 'TCS4Dinner';
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/TCS4Dinner/TCS4Dinner.woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'TCS4Dinner', sans-serif;
+    background: linear-gradient(45deg, #ffd1dc, white);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Password Page */
+#passwordPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(rgba(255, 209, 220, 0.9), rgba(255, 255, 255, 0.9));
+}
+
+.password-box {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+}
+
+#passwordInput {
+    padding: 10px;
+    margin: 20px 0;
+    border: 2px solid pink;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 200px;
+    text-align: center;
+}
+
+/* Gallery Page */
+#galleryPage {
+    display: none;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #ff69b4;
+    margin: 20px 0;
+}
+
+.countdown {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 192, 203, 0.3);
+}
+
+.audio-player {
+    text-align: center;
+    margin: 30px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 192, 203, 0.3);
+}
+
+#audioPlayer {
+    width: 80%;
+    max-width: 500px;
+    margin: 10px auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 192, 203, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 3px solid pink;
+    border-radius: 15px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    color: #ff69b4;
+}
+
+/* Message Page */
+#messagePage {
+    display: none;
+}
+
+.message-container {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 800px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(255, 192, 203, 0.5);
+}
+
+.love-message {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.floating-hearts {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    color: pink;
+    font-size: 24px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.heart:nth-child(1) { left: 10%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 30%; animation-delay: 0.5s; }
+.heart:nth-child(3) { left: 50%; animation-delay: 1s; }
+.heart:nth-child(4) { left: 70%; animation-delay: 1.5s; }
+.heart:nth-child(5) { left: 90%; animation-delay: 2s; }
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* Button Styles */
+.button {
+    background: #ff69b4;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: #ff1493;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .countdown {
+        font-size: 18px;
+    }
+
+    .message-container {
+        margin: 20px;
+        padding: 20px;
+    }
+}

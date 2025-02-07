@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 5th Anniversary</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Password Page -->
+    <div id="passwordPage">
+        <div class="password-box">
+            <h2>💕 Please Enter Password 💕</h2>
+            <input type="password" id="passwordInput" maxlength="6" placeholder="Enter 6-digit password">
+            <button class="button" onclick="checkPassword()">Enter</button>
+        </div>
+    </div>
+
+    <!-- Gallery Page -->
+    <div id="galleryPage">
+        <div class="container">
+            <h1>Happy 5th Anniversary! 💑</h1>
+            
+            <div class="countdown" id="countdown"></div>
+            
+            <div class="audio-player">
+                <h3>Our Song: "รัก"</h3>
+                <audio id="audioPlayer" controls>
+                    <source src="audio/love-song.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <img src="images/memory1.jpg" alt="Memory 1">
+                    <p class="caption">Our First Date</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/memory2.jpg" alt="Memory 2">
+                    <p class="caption">Beautiful Moments</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/memory3.jpg" alt="Memory 3">
+                    <p class="caption">Special Times</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/memory4.jpg" alt="Memory 4">
+                    <p class="caption">Precious Memories</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/memory5.jpg" alt="Memory 5">
+                    <p class="caption">Happy Together</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/memory6.jpg" alt="Memory 6">
+                    <p class="caption">Forever Love</p>
+                </div>
+            </div>
+            
+            <button class="button" onclick="showMessage()">View Message ❤️</button>
+        </div>
+    </div>
+
+    <!-- Message Page -->
+    <div id="messagePage">
+        <div class="container">
+            <div class="message-container">
+                <h2>ความในใจถึงคนพิเศษ</h2>
+                <p class="love-message">
+                    [ใส่ข้อความของคุณตรงนี้]
+                </p>
+                <div class="floating-hearts">
+                    <div class="heart">❤️</div>
+                    <div class="heart">❤️</div>
+                    <div class="heart">❤️</div>
+                    <div class="heart">❤️</div>
+                    <div class="heart">❤️</div>
+                </div>
+            </div>
+            <button class="button" onclick="showGallery()">Back to Gallery</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
